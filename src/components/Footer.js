@@ -9,6 +9,7 @@ import {
   TouchableOpacity,Link
 } from 'react-native';
 import MenuItem from './MenuItem';
+import SocialButton from './SocialButton';
 
 export default class Footer extends React.Component{
   constructor(props){
@@ -38,9 +39,9 @@ export default class Footer extends React.Component{
         </View>
         <View style={styles.redes}>
           <View style={styles.btnContainer}>
-            <SocialIcon type='facebook' onPress={()=> alert( "Enviado a Facebook")} />
-            <SocialIcon type='instagram'onPress={()=> alert( "Enviado a Instagram")} />
-            <SocialIcon type='google-plus-official' onPress={()=> alert( "Enviado a Google Plus")}/>
+            <SocialButton type="facebook" url="https://www.facebook.com/fruticoladecolombia" />
+            <SocialButton type="instagram" url="https://instagram.com/fruticola_de_colombia" />
+            <SocialButton type="google-plus-official" url="https://plus.google.com/113031610345297501242" />
           </View>
           <View style={styles.btnContainer}>
           <Text style={{padding:2}}>Fruticola de Colombia – Distribuidores #1 de Dole Chile en Colombia. © 2017 </Text>
@@ -49,6 +50,8 @@ export default class Footer extends React.Component{
       </View>
     )
   }
+
+
 }
 
 //Estilos

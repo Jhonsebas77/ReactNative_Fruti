@@ -1,5 +1,6 @@
 'use stric'
 import React, { Component } from 'react';
+import { Card } from 'react-native-elements';
 import {StyleSheet,Text,View,ScrollView,} from 'react-native';
 import BannerInPages from '../components/BannerInPages';
 import ImageOverlay from '../components/ImageOverlay';
@@ -25,8 +26,8 @@ export default class Frutas extends React.Component{
         }}
         alwaysBounceVertical={false}
         showsVerticalScrollIndicator={false}>
-          <View style={{flex: 0.5, backgroundColor: "#fff"}} >
-            <Text style={styles.header}> Fruta Fresca </Text>
+          <View style={{flex: 0.5}} >
+          <Card title="Fruta Fresca">
             <View style={styles.scrollContainer}>
               <View style={styles.menuContainer}>
                 <MenuItem itemImage={require('../img/frutas1.jpg')} />
@@ -39,7 +40,8 @@ export default class Frutas extends React.Component{
                 <MenuItem itemImage={require('../img/frutas8.jpg')} />
               </View>
             </View>
-            <Text style={styles.header}>Bandejas </Text>
+          </Card>
+          <Card title="Bandejas">
               <View style={styles.scrollContainer}>
                 <View style={styles.menuContainer}>
                   <MenuItem itemImage={require('../img/bandejas1.jpg')} />
@@ -51,7 +53,8 @@ export default class Frutas extends React.Component{
                   <MenuItem itemImage={require('../img/bandejas7.jpg')} />
                 </View>
               </View>
-            <Text style={styles.header}>Burbujas </Text>
+          </Card>
+          <Card title="Burbujas">
               <View style={styles.scrollContainer}>
                 <View style={styles.menuContainer}>
                   <MenuItem itemImage={require('../img/burbuja1.jpg')} />
@@ -60,12 +63,15 @@ export default class Frutas extends React.Component{
                   <MenuItem itemImage={require('../img/burbuja4.jpg')} />
                 </View>
               </View>
-            <Text style={styles.header}>Anchetas </Text>
+              </Card>
+            <Card title="Anchetas">
             <View style={styles.scrollContainer}>
               <MenuItem itemImage={require('../img/ancheta.jpg')} />
             </View>
-           <Footer/>
+            </Card>
+
           </View>
+           <Footer/>
         </ScrollView>
     )
   }
@@ -91,6 +97,10 @@ const styles = StyleSheet.create({
     textAlign:'left',
     padding:10,
     color:'#FF0000'
+  },
+  cardContainer: {
+    fontSize:28,
+    color:'#FF0000',
   },
 })
 

@@ -1,6 +1,5 @@
 'use stric'
 import React, { Component } from 'react';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import {StyleSheet,WebView,} from 'react-native';
 
 export default class Politica extends React.Component{

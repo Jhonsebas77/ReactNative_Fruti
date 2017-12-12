@@ -6,6 +6,7 @@ import {
   Button,Alert,TouchableHighlight,
   StatusBar,KeyboardAvoidingView,ScrollView,
 } from 'react-native';
+import { Card } from 'react-native-elements';
 import BannerInPages from '../components/BannerInPages';
 import ImageOverlay from '../components/ImageOverlay';
 import MenuItem from '../components/MenuItem';
@@ -31,8 +32,7 @@ export default class Recetas extends React.Component{
         showsVerticalScrollIndicator={false}>
 
           <View style={{flex: 0.5, backgroundColor: "#fff"}} >
-
-            <Text style={styles.header}> Disfruta estos deliciosos Smoothies </Text>
+          <Card title="Disfruta estos deliciosos Smoothies">
             <View style={styles.scrollContainer}>
               <View style={styles.menuContainer}>
                 <MenuItem itemImage={require('../img/smoothie1.jpg')} />
@@ -42,7 +42,8 @@ export default class Recetas extends React.Component{
                 <MenuItem itemImage={require('../img/smoothie5.jpg')} />
               </View>
             </View>
-            <Text style={styles.header}>Recetas de la Abuela Norma </Text>
+          </Card>
+          <Card title="Recetas de la Abuela Norma">
               <View style={styles.scrollContainer}>
                 <View style={styles.menuContainer}>
                   <MenuItem itemImage={require('../img/norma1.jpg')} />
@@ -55,9 +56,10 @@ export default class Recetas extends React.Component{
                   <MenuItem itemImage={require('../img/norma8.jpg')} />
                 </View>
               </View>
+            </Card>
               <Footer/>
           </View>
-          <View style={{flex: 0.5, backgroundColor: "blue"}}/>
+          
         </ScrollView>
     )
   }

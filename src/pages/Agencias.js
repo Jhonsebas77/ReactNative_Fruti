@@ -4,6 +4,7 @@ import {
   StyleSheet,Text,
   View,Image,ScrollView,
 } from 'react-native';
+import { Card } from 'react-native-elements';
 import BannerInPages from '../components/BannerInPages';
 import ImageOverlay from '../components/ImageOverlay';
 import Footer from '../components/Footer';
@@ -19,10 +20,9 @@ export default class Agencias extends React.Component{
      const { params } = this.props.navigation.state;
     return(
       <ScrollView style={styles.container}>
-        <Text style={styles.header}>Nuestras Agencias en Colombia</Text>
-          <View style={styles.containerImage}>
-            <Image source= {require('../img/Mapa.jpg') } resizeMode='center'/>
-          </View>
+        <Card title="Nuestras Agencias en Colombia">
+            <Image source= {require('../img/Mapa.jpg') } resizeMode="cover" style={styles.containerImage}/>
+        </Card>
         <Footer/>
       </ScrollView>
     )
@@ -33,9 +33,6 @@ const styles = StyleSheet.create({
   containerImage: {
     alignItems: 'center',
     justifyContent: 'center',
-    flexWrap:'wrap',
-    flexDirection: 'row',
-    backgroundColor: '#fff',
   },
     container: {
     flex: 1,

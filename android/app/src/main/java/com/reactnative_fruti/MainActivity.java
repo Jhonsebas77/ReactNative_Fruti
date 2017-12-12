@@ -1,4 +1,4 @@
-package com.ecommerceappbutton;
+package com.reactnative_fruti;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "eCommerceAppButton";
+        return "ReactNative_Fruti";
     }
 }

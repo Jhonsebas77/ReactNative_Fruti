@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.ecommerceappbutton",
+    package = "com.reactnative_fruti",
 )
 
 android_resource(
     name = "res",
-    package = "com.ecommerceappbutton",
+    package = "com.reactnative_fruti",
     res = "src/main/res",
 )
 
